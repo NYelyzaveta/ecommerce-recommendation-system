@@ -55,29 +55,21 @@ def get_recommendations(prod_name, k=5, cosine_similarity=cosine_sim):
             
     return df[['prod_name', 'product_type_name', 'detail_desc']].iloc[unique_recommendations]
 
-test_product = df['prod_name'].iloc[3793]
-test_product_2 = df['prod_name'].iloc[4563]
-test_product_3 = df['prod_name'].iloc[8888]
+
+test_product = df['prod_name'].iloc[4599]
+test_product_2 = df['prod_name'].iloc[8888]
 
 
 print("-" * 50)
 print(f"CLIENT VIEWING PRODUCT: {test_product}")
-print(f"Description: {df['detail_desc'].iloc[3793]}")
+print(f"Description: {df['detail_desc'].iloc[4599]}")
 print("-" * 50)
 print("SYSTEM RECOMMENDS TOP-5 SIMILAR PRODUCTS:")
 print(get_recommendations(test_product))
 
 print("-" * 50)
 print(f"CLIENT VIEWING PRODUCT: {test_product_2}")
-print(f"Description: {df['detail_desc'].iloc[4563]}")
-print("-" * 50)
-print("SYSTEM RECOMMENDS TOP-5 SIMILAR PRODUCTS:")
-print(get_recommendations(test_product_2))
-
-print("-" * 50)
-print(f"CLIENT VIEWING PRODUCT: {test_product_3}")
 print(f"Description: {df['detail_desc'].iloc[8888]}")
 print("-" * 50)
 print("SYSTEM RECOMMENDS TOP-5 SIMILAR PRODUCTS:")
-print(get_recommendations(test_product_3))
-
+print(get_recommendations(test_product_2))
